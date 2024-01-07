@@ -8,6 +8,10 @@ const moment = require("moment");
 const expressLayout = require("express-ejs-layouts");
 
 // =============== dotEnv configuration and dataBase connection call ====================
+
+dotenv.config();
+connectDB();
+
 moment().format();
 
 // ======= SCSS ========
@@ -41,7 +45,7 @@ app.set("views", path.join(__dirname, "views"));
 // const router = require('./routes')
 app.use("/", require("./routes/index"));
 
-app.listen(8000, (error) => {
+app.listen(process.env.PORT, (error) => {
    if (error) {
       console.log("error in the port");
    }
