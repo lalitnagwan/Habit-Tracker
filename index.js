@@ -8,10 +8,6 @@ const moment = require("moment");
 const expressLayout = require("express-ejs-layouts");
 
 // =============== dotEnv configuration and dataBase connection call ====================
-
-dotenv.config();
-connectDB();
-
 moment().format();
 
 // ======= SCSS ========
