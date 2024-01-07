@@ -45,15 +45,9 @@ app.set("views", path.join(__dirname, "views"));
 // const router = require('./routes')
 app.use("/", require("./routes/index"));
 
-app.listen(process.env.PORT, (error) => {
+app.listen(8000, (error) => {
    if (error) {
       console.log("error in the port");
    }
-   console.log(
-      `     
-
-      ******************* HEY! SERVER IS RUNNING on Link :  http://localhost:${process.env.PORT} **********************
-      
-      `
-   );
+   console.log("Server is running");
 });
